@@ -114,10 +114,6 @@ function p1Turn() {
   p2DiceArea.classList.remove("active-player");
   p1Title.classList.add("active-text");
   p2Title.classList.remove("active-text");
-  p1RollButton.disabled = false;
-  p1BankButton.disabled = false;
-  p2RollButton.disabled = true;
-  p2BankButton.disabled = true;
   p1total = 0;
   disableP2Btns();
   checkForWinner();
@@ -128,12 +124,7 @@ function p2Turn() {
   p1DiceArea.classList.remove("active-player");
   p2Title.classList.add("active-text");
   p1Title.classList.remove("active-text");
-  p2RollButton.disabled = false;
-  p2BankButton.disabled = false;
-  p1RollButton.disabled = true;
-  p1BankButton.disabled = true;
   p2total = 0;
-
   disableP1Btns();
   checkForWinner();
 }
@@ -156,13 +147,7 @@ function playAgain() {
   gameIntro.style.display = "none";
   gameMain.style.display = "block";
   backgroundDiv.classList.add("bg-color-sml");
-}
-
-function disableP2Btns() {
-  p1RollButton.classList.remove("disabled");
-  p1BankButton.classList.remove("disabled");
-  p2RollButton.classList.add("disabled");
-  p2BankButton.classList.add("disabled");
+  winnerDisplay.innerText = "";
 }
 
 function disableP1Btns() {
@@ -170,6 +155,32 @@ function disableP1Btns() {
   p2BankButton.classList.remove("disabled");
   p1RollButton.classList.add("disabled");
   p1BankButton.classList.add("disabled");
+  p2RollButton.disabled = false;
+  p2BankButton.disabled = false;
+  p1RollButton.disabled = true;
+  p1BankButton.disabled = true;
+}
+
+function disableP2Btns() {
+  p1RollButton.classList.remove("disabled");
+  p1BankButton.classList.remove("disabled");
+  p2RollButton.classList.add("disabled");
+  p2BankButton.classList.add("disabled");
+  p1RollButton.disabled = false;
+  p1BankButton.disabled = false;
+  p2RollButton.disabled = true;
+  p2BankButton.disabled = true;
+}
+
+function disableAllButtons() {
+  p1RollButton.classList.add("disabled");
+  p1BankButton.classList.add("disabled");
+  p2RollButton.classList.add("disabled");
+  p2BankButton.classList.add("disabled");
+  p1RollButton.disabled = true;
+  p1BankButton.disabled = true;
+  p2RollButton.disabled = true;
+  p2BankButton.disabled = true;
 }
 
 function dice1Wiggle() {
