@@ -1,10 +1,10 @@
 const diceIcons = [
-  "./images/dice-face-1.png",
-  "./images/dice-face-2.png",
-  "./images/dice-face-3.png",
-  "./images/dice-face-4.png",
-  "./images/dice-face-5.png",
-  "./images/dice-face-6.png",
+  "images/dice-face-1.png",
+  "images/dice-face-2.png",
+  "images/dice-face-3.png",
+  "images/dice-face-4.png",
+  "images/dice-face-5.png",
+  "images/dice-face-6.png",
 ];
 
 let p1total = 0;
@@ -33,6 +33,8 @@ const p2Title = document.getElementById("player-2-display");
 const dice1Bg = document.getElementById("dice-1-img-bg");
 const dice2Bg = document.getElementById("dice-2-img-bg");
 const backgroundDiv = document.querySelector(".bg-color");
+const p1RunningTotal = document.querySelector(".p1-running-total");
+const p2RunningTotal = document.querySelector(".p2-running-total");
 
 function choseWhoStarts() {
   gameIntro.style.display = "block";
@@ -110,8 +112,8 @@ function bankP2Score() {
 }
 
 function p1Turn() {
-  p1DiceArea.classList.add("active-player");
-  p2DiceArea.classList.remove("active-player");
+  p1RunningTotal.classList.add("active-player");
+  p2RunningTotal.classList.remove("active-player");
   p1Title.classList.add("active-text");
   p2Title.classList.remove("active-text");
   p1total = 0;
@@ -120,8 +122,8 @@ function p1Turn() {
 }
 
 function p2Turn() {
-  p2DiceArea.classList.add("active-player");
-  p1DiceArea.classList.remove("active-player");
+  p2RunningTotal.classList.add("active-player");
+  p1RunningTotal.classList.remove("active-player");
   p2Title.classList.add("active-text");
   p1Title.classList.remove("active-text");
   p2total = 0;

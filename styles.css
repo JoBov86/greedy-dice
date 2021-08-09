@@ -107,6 +107,7 @@ h3 {
 }
 
 .active-player {
+  width: 250px;
   padding: 1em;
   margin: 1em;
   border-radius: 25px;
@@ -132,7 +133,8 @@ h3 {
   min-width: 50px;
 }
 
-.running-total {
+.p1-running-total,
+.p2-running-total {
   text-align: center;
   margin: 0 auto;
 }
