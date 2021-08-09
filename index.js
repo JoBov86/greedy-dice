@@ -133,13 +133,13 @@ function p2Turn() {
 
 function checkForWinner() {
   if (p1BankTotal >= 100) {
-    p1DiceArea.classList.remove("active-player");
-    p2DiceArea.classList.remove("active-player");
+    p1RunningTotal.classList.remove("active-player");
+    p2RunningTotal.classList.remove("active-player");
     winnerDisplay.innerText = "PLAYER 1 WINS!!!";
     disableAllButtons();
   } else if (p2BankTotal >= 100) {
-    p1DiceArea.classList.remove("active-player");
-    p2DiceArea.classList.remove("active-player");
+    p1RunningTotal.classList.remove("active-player");
+    p2RunningTotal.classList.remove("active-player");
     winnerDisplay.innerText = "PLAYER 2 WINS!!!";
     disableAllButtons();
   }
