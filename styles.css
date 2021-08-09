@@ -43,28 +43,32 @@ h3 {
 
 .total-num {
   color: rgb(33, 33, 83);
-
   font-size: 12rem;
-  margin: 0.5em;
 }
 
 #winner-display {
   color: purple;
   font-size: 2rem;
   font-weight: bolder;
+  letter-spacing: 5px;
+  margin: 0;
 }
 
 /* LAYOUT */
 
 .player-area {
   display: flex;
+  min-width: 500px;
+  justify-content: space-between;
+  padding: 1em;
+  margin: 1em;
 }
 
 .dice-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  margin: auto;
 }
 
 .dice-area {
@@ -85,12 +89,12 @@ h3 {
 }
 
 .red {
-  background-color: rgba(255, 0, 0, 0.63);
+  background-color: rgba(255, 0, 0, 0.8);
   border-radius: 25px;
 }
 
 .green {
-  background-color: rgba(122, 228, 154, 0.63);
+  background-color: rgba(122, 228, 154, 0.8);
   border-radius: 25px;
 }
 
@@ -114,13 +118,24 @@ h3 {
   border-radius: 25px;
   margin: 0 auto;
   padding: 1em;
-  width: 60%;
+  min-width: 1200px;
+  max-width: 1200px;
+  max-height: 710px;
 }
 
 .bg-color-sml {
-  width: 38%;
+  min-width: 650px;
+  max-width: 650px;
 }
 
+.separator-div {
+  min-width: 50px;
+}
+
+.running-total {
+  text-align: center;
+  margin: 0 auto;
+}
 /* BUTTONS */
 
 .btn {
