@@ -2,16 +2,20 @@ body {
   text-align: center;
   background-color: rgb(138, 138, 194);
   font-family: sans-serif;
-  padding: 4em;
   overflow-y: hidden;
-  min-width: 1250px;
+  width: 90%;
+  height: 100vh;
+  display: flex;
   overflow-x: hidden;
+  margin: 0 auto;
+  min-width: 550px;
 }
 
 /* TYPOGRAPHY */
 
 h3 {
   color: grey;
+  font-size: 2rem;
 }
 
 .explanation {
@@ -33,7 +37,7 @@ h3 {
 }
 
 .total {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .bank-total {
@@ -48,20 +52,20 @@ h3 {
 
 #winner-display {
   color: purple;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bolder;
   letter-spacing: 5px;
   margin: 0;
 }
 
-/* LAYOUT */
+/* LAYOUT AND STYLING */
 
 .player-area {
   display: flex;
-  min-width: 500px;
+  width: 50%;
   justify-content: space-between;
   padding: 1em;
-  margin: 1em;
+  /* margin: 1em; */
 }
 
 .dice-container {
@@ -74,6 +78,7 @@ h3 {
 .dice-area {
   display: flex;
   flex-direction: column;
+  margin: 0 1em;
 }
 
 #game-not-started {
@@ -107,9 +112,8 @@ h3 {
 }
 
 .active-player {
-  width: 250px;
+  width: 50%;
   padding: 1em;
-  margin: 1em;
   border-radius: 25px;
   background-color: rgba(138, 138, 194, 0.445);
 }
@@ -117,26 +121,35 @@ h3 {
 .bg-color {
   background-color: rgb(223, 219, 219);
   border-radius: 25px;
-  margin: 0 auto;
-  padding: 1em;
-  min-width: 1200px;
-  max-width: 1200px;
-  max-height: 710px;
+  margin: auto;
+  /* min-width: 1200px;
+  max-width: 1200px; */
+  width: 100%;
+  /* max-height: 710px; */
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3em;
 }
 
 .bg-color-sml {
   min-width: 650px;
-  max-width: 650px;
-}
+  /* max-width: 650px; */
+  margin: auto;
+  width: 50%;
+  padding-bottom: 3em;
 
-.separator-div {
-  min-width: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .p1-running-total,
 .p2-running-total {
   text-align: center;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /* BUTTONS */
 
